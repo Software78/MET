@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A01984B2B39BD53002E803E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01984A2B39BD53002E803E /* Colors.swift */; };
+		5A0198522B39C331002E803E /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198512B39C331002E803E /* Welcome.swift */; };
+		5A0198542B39D553002E803E /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198532B39D553002E803E /* Signup.swift */; };
+		5A0198562B3AAA23002E803E /* Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198552B3AAA23002E803E /* Terms.swift */; };
+		5A0198582B3AAE4A002E803E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198572B3AAE4A002E803E /* Survey.swift */; };
+		5A546B0F2B39AEA100780A78 /* Satoshi-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B052B39AEA000780A78 /* Satoshi-BlackItalic.otf */; };
+		5A546B102B39AEA100780A78 /* Satoshi-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B062B39AEA000780A78 /* Satoshi-Bold.otf */; };
+		5A546B112B39AEA100780A78 /* Satoshi-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B072B39AEA000780A78 /* Satoshi-Italic.otf */; };
+		5A546B122B39AEA100780A78 /* Satoshi-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B082B39AEA000780A78 /* Satoshi-Light.otf */; };
+		5A546B132B39AEA100780A78 /* Satoshi-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B092B39AEA000780A78 /* Satoshi-LightItalic.otf */; };
+		5A546B142B39AEA100780A78 /* Satoshi-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B0A2B39AEA000780A78 /* Satoshi-MediumItalic.otf */; };
+		5A546B152B39AEA100780A78 /* Satoshi-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B0B2B39AEA100780A78 /* Satoshi-Black.otf */; };
+		5A546B162B39AEA100780A78 /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B0C2B39AEA100780A78 /* Satoshi-Regular.otf */; };
+		5A546B172B39AEA100780A78 /* Satoshi-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B0D2B39AEA100780A78 /* Satoshi-BoldItalic.otf */; };
+		5A546B182B39AEA100780A78 /* Satoshi-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A546B0E2B39AEA100780A78 /* Satoshi-Medium.otf */; };
 		5AEDF3522B39AD7900283EB9 /* METApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDF3512B39AD7900283EB9 /* METApp.swift */; };
 		5AEDF3542B39AD7900283EB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDF3532B39AD7900283EB9 /* ContentView.swift */; };
 		5AEDF3562B39AD7B00283EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AEDF3552B39AD7B00283EB9 /* Assets.xcassets */; };
@@ -14,11 +29,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3050F66592C7C8E527E3CBF9 /* Pods-MET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MET.debug.xcconfig"; path = "Target Support Files/Pods-MET/Pods-MET.debug.xcconfig"; sourceTree = "<group>"; };
+		5A01984A2B39BD53002E803E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5A0198512B39C331002E803E /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		5A0198532B39D553002E803E /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		5A0198552B3AAA23002E803E /* Terms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terms.swift; sourceTree = "<group>"; };
+		5A0198572B3AAE4A002E803E /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		5A546B052B39AEA000780A78 /* Satoshi-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-BlackItalic.otf"; sourceTree = "<group>"; };
+		5A546B062B39AEA000780A78 /* Satoshi-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Bold.otf"; sourceTree = "<group>"; };
+		5A546B072B39AEA000780A78 /* Satoshi-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Italic.otf"; sourceTree = "<group>"; };
+		5A546B082B39AEA000780A78 /* Satoshi-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Light.otf"; sourceTree = "<group>"; };
+		5A546B092B39AEA000780A78 /* Satoshi-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-LightItalic.otf"; sourceTree = "<group>"; };
+		5A546B0A2B39AEA000780A78 /* Satoshi-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-MediumItalic.otf"; sourceTree = "<group>"; };
+		5A546B0B2B39AEA100780A78 /* Satoshi-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Black.otf"; sourceTree = "<group>"; };
+		5A546B0C2B39AEA100780A78 /* Satoshi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Regular.otf"; sourceTree = "<group>"; };
+		5A546B0D2B39AEA100780A78 /* Satoshi-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-BoldItalic.otf"; sourceTree = "<group>"; };
+		5A546B0E2B39AEA100780A78 /* Satoshi-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Medium.otf"; sourceTree = "<group>"; };
 		5AEDF34E2B39AD7900283EB9 /* MET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEDF3512B39AD7900283EB9 /* METApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METApp.swift; sourceTree = "<group>"; };
 		5AEDF3532B39AD7900283EB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5AEDF3552B39AD7B00283EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AEDF3582B39AD7B00283EB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FC71D13FAB207B8E5A25AF2 /* Pods-MET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MET.release.xcconfig"; path = "Target Support Files/Pods-MET/Pods-MET.release.xcconfig"; sourceTree = "<group>"; };
+		EE31EAC5992928D4C829BB98 /* Pods_MET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,11 +65,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00DDA55A64AD8EDDD717C540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE31EAC5992928D4C829BB98 /* Pods_MET.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A0198492B39BD49002E803E /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A01984A2B39BD53002E803E /* Colors.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		5A01984C2B39BE72002E803E /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5A0198512B39C331002E803E /* Welcome.swift */,
+				5A0198532B39D553002E803E /* Signup.swift */,
+				5A0198552B3AAA23002E803E /* Terms.swift */,
+				5A0198572B3AAE4A002E803E /* Survey.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		5A546B042B39AE8D00780A78 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5A546B0B2B39AEA100780A78 /* Satoshi-Black.otf */,
+				5A546B052B39AEA000780A78 /* Satoshi-BlackItalic.otf */,
+				5A546B062B39AEA000780A78 /* Satoshi-Bold.otf */,
+				5A546B0D2B39AEA100780A78 /* Satoshi-BoldItalic.otf */,
+				5A546B072B39AEA000780A78 /* Satoshi-Italic.otf */,
+				5A546B082B39AEA000780A78 /* Satoshi-Light.otf */,
+				5A546B092B39AEA000780A78 /* Satoshi-LightItalic.otf */,
+				5A546B0E2B39AEA100780A78 /* Satoshi-Medium.otf */,
+				5A546B0A2B39AEA000780A78 /* Satoshi-MediumItalic.otf */,
+				5A546B0C2B39AEA100780A78 /* Satoshi-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5AEDF3452B39AD7900283EB9 = {
 			isa = PBXGroup;
 			children = (
+				5A546B042B39AE8D00780A78 /* Fonts */,
 				5AEDF3502B39AD7900283EB9 /* MET */,
 				5AEDF34F2B39AD7900283EB9 /* Products */,
+				EC417F09FB902B3C8C5E63C8 /* Pods */,
+				00DDA55A64AD8EDDD717C540 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +131,8 @@
 		5AEDF3502B39AD7900283EB9 /* MET */ = {
 			isa = PBXGroup;
 			children = (
+				5A01984C2B39BE72002E803E /* onboarding */,
+				5A0198492B39BD49002E803E /* helpers */,
 				5AEDF3512B39AD7900283EB9 /* METApp.swift */,
 				5AEDF3532B39AD7900283EB9 /* ContentView.swift */,
 				5AEDF3552B39AD7B00283EB9 /* Assets.xcassets */,
@@ -67,6 +149,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC417F09FB902B3C8C5E63C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3050F66592C7C8E527E3CBF9 /* Pods-MET.debug.xcconfig */,
+				7FC71D13FAB207B8E5A25AF2 /* Pods-MET.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +165,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AEDF35C2B39AD7B00283EB9 /* Build configuration list for PBXNativeTarget "MET" */;
 			buildPhases = (
+				2CFD79914B001726BE49180E /* [CP] Check Pods Manifest.lock */,
 				5AEDF34A2B39AD7900283EB9 /* Sources */,
 				5AEDF34B2B39AD7900283EB9 /* Frameworks */,
 				5AEDF34C2B39AD7900283EB9 /* Resources */,
@@ -125,20 +217,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A546B162B39AEA100780A78 /* Satoshi-Regular.otf in Resources */,
+				5A546B102B39AEA100780A78 /* Satoshi-Bold.otf in Resources */,
+				5A546B182B39AEA100780A78 /* Satoshi-Medium.otf in Resources */,
+				5A546B152B39AEA100780A78 /* Satoshi-Black.otf in Resources */,
 				5AEDF3592B39AD7B00283EB9 /* Preview Assets.xcassets in Resources */,
+				5A546B122B39AEA100780A78 /* Satoshi-Light.otf in Resources */,
+				5A546B0F2B39AEA100780A78 /* Satoshi-BlackItalic.otf in Resources */,
+				5A546B112B39AEA100780A78 /* Satoshi-Italic.otf in Resources */,
+				5A546B172B39AEA100780A78 /* Satoshi-BoldItalic.otf in Resources */,
 				5AEDF3562B39AD7B00283EB9 /* Assets.xcassets in Resources */,
+				5A546B142B39AEA100780A78 /* Satoshi-MediumItalic.otf in Resources */,
+				5A546B132B39AEA100780A78 /* Satoshi-LightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CFD79914B001726BE49180E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MET-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5AEDF34A2B39AD7900283EB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0198522B39C331002E803E /* Welcome.swift in Sources */,
+				5A0198542B39D553002E803E /* Signup.swift in Sources */,
+				5A0198582B3AAE4A002E803E /* Survey.swift in Sources */,
 				5AEDF3542B39AD7900283EB9 /* ContentView.swift in Sources */,
+				5A01984B2B39BD53002E803E /* Colors.swift in Sources */,
 				5AEDF3522B39AD7900283EB9 /* METApp.swift in Sources */,
+				5A0198562B3AAA23002E803E /* Terms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,17 +398,20 @@
 		};
 		5AEDF35D2B39AD7B00283EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3050F66592C7C8E527E3CBF9 /* Pods-MET.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MET/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MET/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,17 +429,20 @@
 		};
 		5AEDF35E2B39AD7B00283EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FC71D13FAB207B8E5A25AF2 /* Pods-MET.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MET/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MET/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
