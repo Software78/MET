@@ -24,33 +24,16 @@ enum GoalEnum {
 struct Survey: View {
     @State private var surveyMode : SurveyModeEnum = SurveyModeEnum.goal
     var body: some View {
-        VStack{
-            switch surveyMode {
-            case .goal:
+        NavigationStack {
+            VStack{
                 GoalView()
-            case .gender:
-                GenderView()
-            case .heightAndWeight:
-                HeightAndWeightView()
-            case .trainingDuration:
-                TrainingDurationView()
+                NavigationLink(destination: Success()){
+                    SigninButton()
+                }
+                
+                .padding()
             }
-            Button(action: {
-                surveyMode=SurveyModeEnum.gender
-            }, label: {
-                Text("Next")
-            })
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Colors.green200.color)
-            .foregroundColor(Colors.white100.color)
-            .font(.system(size: 16, weight: .bold))
-            .cornerRadius(8)
-            .padding(.horizontal)
         }
-    
-        
-        
     }
 }
 
@@ -60,6 +43,8 @@ struct GoalView: View{
         VStack{
             Image("goal")
             Text("What's your goal?")
+                .font(.custom("Satoshi", size: 24).weight(.bold))
+                .foregroundColor(Colors.grey300.color)
                 .padding(.vertical, 24.0)
             
             List{
@@ -102,13 +87,17 @@ struct GoalWidget: View{
                 toggle.toggle()
             } label: {
                 Image(systemName: toggle ? "checkmark.square.fill" : "square")
-                    .foregroundColor(Color("AccentColor"))
+                    .foregroundColor(toggle ? Colors.grey300.color : Colors.grey500.color)
             }
             Spacer()
                 .frame(width: 14)
             VStack(alignment: .leading) {
                 Text(goal.title)
+                    .font(.custom("Satoshi", size: 14).weight(.bold))
+                    .foregroundColor(Colors.grey300.color)
                 Text(goal.subtitle)
+                    .font(.custom("Satoshi", size: 12))
+                    .foregroundColor(Colors.grey300.color)
             }
             Spacer()
         }

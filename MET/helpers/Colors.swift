@@ -10,7 +10,7 @@ import SwiftUI
 
 
 
-enum Colors : String, CaseIterable, Codable {
+enum Colors : String, CaseIterable  {
     case red100 = "red.100"
     case error = "error"
     case red200 = "red.200"
@@ -18,6 +18,8 @@ enum Colors : String, CaseIterable, Codable {
     case green200 = "green.200"
     case grey300 = "grey.300"
     case green600 = "green.600"
+    case grey200 = "grey.200"
+    case grey500 = "grey.500"
 }
 
 extension Colors {
@@ -37,6 +39,10 @@ extension Colors {
             return Color("grey.300")
         case .green600:
             return Color("green.600")
+        case .grey200:
+            return Color("grey.200")
+        case .grey500:
+            return Color("grey.500")
         }
     }
 }

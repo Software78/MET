@@ -4,16 +4,16 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Fonts/Satoshi-Black.otf</string>
-		<string>Fonts/Satoshi-BlackItalic.otf</string>
-		<string>Fonts/Satoshi-Bold.otf</string>
-		<string>Fonts/Satoshi-BoldItalic.otf</string>
-		<string>Fonts/Satoshi-Italic.otf</string>
-		<string>Fonts/Satoshi-Light.otf</string>
-		<string>Fonts/Satoshi-LightItalic.otf</string>
-		<string>Fonts/Satoshi-Medium.otf</string>
-		<string>Fonts/Satoshi-MediumItalic.otf</string>
-		<string>Fonts/Satoshi-Regular.otf</string>
+		<string>Satoshi-Black.otf</string>
+		<string>Satoshi-BlackItalic.otf</string>
+		<string>Satoshi-Bold.otf</string>
+		<string>Satoshi-BoldItalic.otf</string>
+		<string>Satoshi-Italic.otf</string>
+		<string>Satoshi-Light.otf</string>
+		<string>Satoshi-LightItalic.otf</string>
+		<string>Satoshi-Medium.otf</string>
+		<string>Satoshi-MediumItalic.otf</string>
+		<string>Satoshi-Regular.otf</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>

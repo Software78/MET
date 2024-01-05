@@ -16,85 +16,60 @@ struct Welcome: View {
                     .scaledToFill()
                     .edgesIgnoringSafeArea([.top])
                 VStack {
-    //                ViewThatFits {
-                        Spacer()
-    //                }
+                    Spacer()
                     ZStack {
-                            Rectangle()
-                                .fill(Colors.white100.color)
+                        Rectangle()
+                            .fill(Colors.white100.color)
                             .frame(height: 504)
-                            .clipShape(.rect(topLeadingRadius: 20, topTrailingRadius: 20))
-                        VStack(alignment: .leading){
+                            .clipShape(.rect(topLeadingRadius: 32, topTrailingRadius: 32))
+                        VStack(alignment: .leading) {
                             Text("Best Fitness, Exercise, and Stress Management App")
+                                .font(
+                                    Font.custom("Satoshi", size: 24)
+                                        .weight(.bold)
+                                )
                             Spacer()
                                 .frame(height: 12)
-                            Text("Create an account to get your customized exercise,diet, and stress management program.")
+                            Text("Create an account to get your customized exercise, diet, and stress management program.")
+                                .foregroundColor(Colors.grey200.color)
+                                .font(
+                                    Font.custom("Satoshi", size: 16)
+                                        .weight(.medium)
+                                )
                             Spacer()
-                                .frame(height: 40)
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                            })
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(Colors.grey300.color)
-                            .font(.system(size: 16, weight: .bold))
-                            .cornerRadius(8)
-                            .border(Colors.grey300.color, width: 1)
+                            BorderedButton(action: {}, text: "Signup with Google", icon: "google")
                             Spacer()
                                 .frame(height: 12)
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                            })
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(Colors.grey300.color)
-                            .font(.system(size: 16, weight: .bold))
-                            .cornerRadius(8)
-                            .border(Colors.grey300.color, width: 1)
+                            BorderedButton(action: {}, text: "Signup with Apple", icon: "apple")
                             Spacer()
                                 .frame(height: 12)
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                            })
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(Colors.grey300.color)
-                            .font(.system(size: 16, weight: .bold))
-                            .cornerRadius(8)
-                            .border(Colors.grey300.color, width: 1)
+                            NavigationLink(destination: Signup()){
+                                BorderedButton(action: {}, text: "Signup with Email", icon: "email")
+                            }
                             Spacer()
-                                .frame(height: 16)
-                            HStack(){
+                            HStack(alignment: .center){
                                 Rectangle()
                                     .fill(Colors.grey300.color)
-                                    .frame(height: 1)
-                                    .frame(width: 75)// Adjust height as needed
+                                    .frame(height: 1.5)
+                                    .frame(width: 75)
                                 Text("ALREADY HAVE AN ACCOUNT")
-                                    
+                                    .foregroundColor(Colors.grey300.color)
+                                    .font(
+                                        Font.custom("Satoshi", size: 11)
+                                            .weight(.bold)
+                                    )
                                 Rectangle()
                                     .fill(Colors.grey300.color)
-                                    .frame(height: 1)
+                                    .frame(height: 1.5)
                                     .frame(width: 75)
                             }.frame(maxWidth: .infinity)
                             Spacer()
-                                .frame(height: 16)
-                            NavigationLink(destination: Signup()){
-                                Button(action: {
-                                
-                                }, label: {
-                                    Text("Signup")
-                                })
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Colors.green200.color)
-                                .foregroundColor(Colors.white100.color)
-                                .font(.system(size: 16, weight: .bold))
-                                .cornerRadius(8)
+                            NavigationLink(destination: SignIn()){
+                                SigninButton()
                             }
-                        }.padding()
-                            .frame(height: 504)
-                        }
-                    }
+                        } .padding(.all, 24)
+                    }.frame(height: 504)
+                }
             }
         }
     }
@@ -102,4 +77,70 @@ struct Welcome: View {
 
 #Preview {
     Welcome()
+}
+
+
+struct RoundedAuthButton: View {
+    var action: ()->Void
+    var text: String
+    var icon: String
+    var body: some View {
+        Button(action: action, label: {
+            HStack{
+                Image(icon)
+                Spacer()
+                    .frame(width: 10)
+                Text(text)
+                    .foregroundColor(Colors.grey300.color)
+                    .font(Font.custom("Satoshi", size: 16)
+                        .weight(.bold))
+            }
+            .padding()
+        })
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .border(Colors.grey300.color)
+        
+    }
+}
+
+
+struct SigninButton: View {
+    var text : String = "Sign in"
+    var body: some View {
+        ZStack{
+            RoundedRectangle(cornerRadius: 8)
+                .background(Colors.green200.color)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 44)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+            Text(text)
+                .foregroundColor(Colors.white100.color)
+                .font(Font.custom("Satoshi", size: 16)
+                    .weight(.bold))
+        }
+    }
+}
+
+
+struct BorderedButton:View {
+    var action: ()->Void
+    var text: String
+    var icon: String
+    var body: some View {
+            ZStack{
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Colors.grey300.color, lineWidth: 1)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 44)
+                HStack{
+                    Image(icon)
+                    Spacer()
+                        .frame(width: 10)
+                    Text(text)
+                        .foregroundColor(Colors.grey300.color)
+                        .font(Font.custom("Satoshi", size: 16)
+                            .weight(.bold))
+                }
+            }
+    }
 }
