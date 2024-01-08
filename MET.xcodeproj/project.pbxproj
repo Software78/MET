@@ -12,6 +12,7 @@
 		5A0198542B39D553002E803E /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198532B39D553002E803E /* Signup.swift */; };
 		5A0198562B3AAA23002E803E /* Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198552B3AAA23002E803E /* Terms.swift */; };
 		5A0198582B3AAE4A002E803E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0198572B3AAE4A002E803E /* Survey.swift */; };
+		5A688E8C2B4C46780025A962 /* SubscriptionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A688E8B2B4C46780025A962 /* SubscriptionModal.swift */; };
 		5A735E962B46DEE60079D5BB /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A735E8C2B46DEE50079D5BB /* Satoshi-Regular.otf */; };
 		5A735E972B46DEE60079D5BB /* Satoshi-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A735E8D2B46DEE50079D5BB /* Satoshi-Italic.otf */; };
 		5A735E982B46DEE60079D5BB /* Satoshi-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A735E8E2B46DEE50079D5BB /* Satoshi-LightItalic.otf */; };
@@ -39,6 +40,7 @@
 		5A0198532B39D553002E803E /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		5A0198552B3AAA23002E803E /* Terms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terms.swift; sourceTree = "<group>"; };
 		5A0198572B3AAE4A002E803E /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		5A688E8B2B4C46780025A962 /* SubscriptionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModal.swift; sourceTree = "<group>"; };
 		5A735E8C2B46DEE50079D5BB /* Satoshi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Regular.otf"; sourceTree = "<group>"; };
 		5A735E8D2B46DEE50079D5BB /* Satoshi-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Italic.otf"; sourceTree = "<group>"; };
 		5A735E8E2B46DEE50079D5BB /* Satoshi-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-LightItalic.otf"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				5AD302D32B4827F4005ABEB4 /* BeginSubscription.swift */,
 				5AD302D52B48540C005ABEB4 /* ContinueSubscription.swift */,
+				5A688E8B2B4C46780025A962 /* SubscriptionModal.swift */,
 			);
 			path = subscription;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A688E8C2B4C46780025A962 /* SubscriptionModal.swift in Sources */,
 				5A0198522B39C331002E803E /* Welcome.swift in Sources */,
 				5AD302D12B481FE5005ABEB4 /* Success.swift in Sources */,
 				5A0198542B39D553002E803E /* Signup.swift in Sources */,
