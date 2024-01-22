@@ -107,10 +107,11 @@ struct RoundedAuthButton: View {
 
 struct SigninButton: View {
     var text : String = "Sign in"
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 8)
-                .background(Colors.green200.color)
+                .background(.blue)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 44)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             Text(text)

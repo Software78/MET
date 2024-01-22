@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-    
+
 enum SubscriptionPlanModeEnum: CaseIterable {
     case Month
     case Year
@@ -39,7 +39,10 @@ let subscriptionPlanList : [SubscriptionPlan] = [
 ]
 
 struct SubscriptionModal: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var shouldNavigate: Bool
     var body: some View {
+        
         VStack{
             HStack {
                 ZStack {
@@ -52,7 +55,7 @@ struct SubscriptionModal: View {
                                 bottomTrailingRadius: 8,
                                 topTrailingRadius: 1
                             )
-                    )
+                        )
                     HStack{
                         Text("MET")
                             .font(.custom("Satoshi", size: 12).weight(.bold))
@@ -72,7 +75,7 @@ struct SubscriptionModal: View {
                                         bottomTrailingRadius: 8,
                                         topTrailingRadius: 1
                                     )
-                            ).frame(maxWidth: 40, maxHeight: 20)
+                                ).frame(maxWidth: 40, maxHeight: 20)
                             Text("PRO")
                                 .font(.custom("Satoshi", size: 12).weight(.heavy))
                                 .foregroundColor(Colors.white100.color)
@@ -89,12 +92,26 @@ struct SubscriptionModal: View {
             ForEach(subscriptionPlanList){ plan in
                 SubscriptionModeComponent(mode: plan)
             }
+            Text("*Plan automatically renews annualy until canceled")
+                .font(.custom("Satoshi", size: 14).weight(.light))
+                .italic()
+                .foregroundColor(Colors.grey500.color)
+                .padding(.top, 12)
+            Spacer()
+            Button(action: { 
+                dismiss()
+                shouldNavigate = true
+            }){
+                SigninButton(text: "Contine to payment")
+            }
+            
         }.padding()
+        
     }
 }
 
 #Preview {
-    SubscriptionModal()
+    SubscriptionModal(shouldNavigate: .constant(false))
 }
 
 
@@ -105,24 +122,28 @@ struct SubscriptionModeComponent:View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Colors.green600.color, lineWidth: 1)
                 .foregroundColor(.white)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 44)
-            VStack(alignment: .leading){
-                Text(mode.name)
-                    .font(.custom("Satoshi", size: 20).weight(.bold))
-                    .foregroundColor(Colors.grey300.color)
-                HStack {
-                    Text("$\(mode.price)/\(mode.planMode.formattedMode)")
-                        .font(.custom("Satoshi", size: 12).weight(.bold))
+            
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 76)
+            HStack {
+                VStack(alignment: .leading){
+                    Text(mode.name)
+                        .font(.custom("Satoshi", size: 20).weight(.bold))
                         .foregroundColor(Colors.grey300.color)
-                    if(mode.monthlyPrice != 0){
-                        Text("$\(mode.monthlyPrice)/Month")
-                            .font(.custom("Satoshi", size: 12).weight(.light))
-                            .foregroundColor(Colors.grey500.color)
+                    HStack {
+                        Text("$\(mode.price)/\(mode.planMode.formattedMode)")
+                            .font(.custom("Satoshi", size: 12).weight(.bold))
+                            .foregroundColor(Colors.grey300.color)
+                        if(mode.monthlyPrice != 0){
+                            Text("$\(mode.monthlyPrice)/Month")
+                                .font(.custom("Satoshi", size: 12).weight(.light))
+                                .foregroundColor(Colors.grey500.color)
+                        }
                     }
                 }
-            }
+                Spacer()
+            }.padding(.leading, 16)
             
-        
+            
         }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
     }
 }

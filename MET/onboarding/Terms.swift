@@ -11,6 +11,7 @@ struct Terms: View {
     @State private var agree = false
     @State private var authorize = false
     @State private var gather = false
+    @State private var shouldNavigate = false
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -58,22 +59,20 @@ struct Terms: View {
                             .foregroundColor(Colors.grey300.color)
                     }
                     Spacer()
-                    NavigationLink(destination: Survey()){
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text("Agree and continue")
-                                .font(.custom("Satoshi", size: 16).weight(.bold))
-                                .foregroundColor(Colors.white100.color)
-                        })
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Colors.green200.color)
-                        .foregroundColor(Colors.white100.color)
-                        .font(.system(size: 16, weight: .bold))
-                        .cornerRadius(8)
-                        .disabled(true)
-                    }
+                    Button(action: {
+                        shouldNavigate = agree && authorize
+                    }, label: {
+                      SigninButton(text: "Agree and continue")
+                        
+                    })
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor((agree && authorize) ? .accentColor : Colors.grey500.color)
+                    .font(.system(size: 16, weight: .bold))
+                    .cornerRadius(8)
                 }.padding([.top, .leading, .trailing], 24.0)
-            }
+            }.navigationDestination(isPresented: $shouldNavigate, destination: {
+                Survey()
+            })
         }
     }
 }

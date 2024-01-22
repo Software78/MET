@@ -9,47 +9,52 @@ import SwiftUI
 
 struct ContinueSubscription: View {
     @State private var isShowingModal = false
+    @State private var shouldNavigate = false
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Eat well, Get better, Stress less, Stay fit.")
-                .font(.custom("Satoshi", size: 24).weight(.bold))
-                .padding(.vertical, 12)
-            Text("Enjoy MET for 14days all on us")
-                .font(.custom("Satoshi", size: 16).weight(.medium))
-                .padding(.bottom, 32)
-            HStack{
+        NavigationStack {
+            VStack(alignment: .leading) {
+                Text("Eat well, Get better, Stress less, Stay fit.")
+                    .font(.custom("Satoshi", size: 24).weight(.bold))
+                    .padding(.vertical, 12)
+                Text("Enjoy MET for 14days all on us")
+                    .font(.custom("Satoshi", size: 16).weight(.medium))
+                    .padding(.bottom, 32)
+                HStack{
+                    Spacer()
+                    Text("Free")
+                        .font(.custom("Satoshi", size: 12).weight(.bold))
+                        .foregroundColor(Colors.grey500.color)
+                    Text("Pro")
+                        .font(.custom("Satoshi", size: 12).weight(.bold))
+                        .foregroundColor(Colors.grey500.color)
+                }
+                ForEach(subFeaturesList.indices){ index in
+                    SubFeatureComponent(feature: subFeaturesList[index], isGreen: index % 2 == 0 )
+                        .frame(height: 40)
+                }
                 Spacer()
-                Text("Free")
-                    .font(.custom("Satoshi", size: 12).weight(.bold))
-                    .foregroundColor(Colors.grey500.color)
-                Text("Pro")
-                    .font(.custom("Satoshi", size: 12).weight(.bold))
-                    .foregroundColor(Colors.grey500.color)
-            }
-            ForEach(subFeaturesList.indices){ index in
-                SubFeatureComponent(feature: subFeaturesList[index], isGreen: index % 2 == 0 )
-                    .frame(height: 40)
-            }
-            Spacer()
-            HStack {
-                Spacer()
-                Text("*Get over 14 days of free trial")
-                    .font(.custom("Satoshi", size: 12).weight(.medium))
-                    .foregroundColor(Colors.grey500.color)
-                    .italic()
-                    .padding(.bottom, 12)
-                Spacer()
-            }
-            Button(action: {isShowingModal = !isShowingModal}){
-                CustomButton(text: "Choose a plan")
-            }
-            .sheet(isPresented: $isShowingModal) {
-                SubscriptionModal()
-                    .presentationDetents([.medium])
-            }
-        }
-        .padding()
+                HStack {
+                    Spacer()
+                    Text("*Get over 14 days of free trial")
+                        .font(.custom("Satoshi", size: 12).weight(.medium))
+                        .foregroundColor(Colors.grey500.color)
+                        .italic()
+                        .padding(.bottom, 12)
+                    Spacer()
+                }
+                Button(action: {isShowingModal = !isShowingModal}){
+                    CustomButton(text: "Choose a plan")
+                }
+                .sheet(isPresented: $isShowingModal) {
+                    SubscriptionModal(shouldNavigate: $shouldNavigate)
+                        .presentationDetents([.medium])
+                }
+            }.navigationDestination(isPresented: $shouldNavigate, destination: {
+                AddPaymentMethod()
+            })
+            .padding()
         .navigationBarBackButtonHidden()
+        }
     }
 }
 
